@@ -1,0 +1,16 @@
+<div class="container">
+  <app-sign-form
+    [title]="'Sign In'"
+    [formGroup]="signInForm"
+    [submitType]="SUBMIT_TYPE"
+    [submitTitle]="'Enter'"
+    [linkURL]="'/sign-up'"
+    [linkTitle]="'Sign Up'"
+    (submitForm)="onSubmit()"
+  ></app-sign-form>
+</div>
+
+<app-snackbar
+  [formStatus]="formStatus"
+  [messageStatus]="messageStatus"
+></app-snackbar>

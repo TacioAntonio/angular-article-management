@@ -1,27 +1,49 @@
-# AngularArticleManager
+# [ANGULAR] Article Management
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+![image](images/application.gif)
+> This application aims to act as an article management system, where users can authenticate and view articles created by administrators. Technically, this application is designed for unit testing with Jest and implementing an API created in Nest.Js, all running within Docker. - PT/BR
 
-## Development server
+> Essa aplicação tem como objetivo atuar como um gerenciamento de artigos, onde usuários poderão a partir da autenticação, visualizar artigos criados pelos administradores. Tecnicamente essa aplicação tem como objetivo a realização de testes unitários com Jest, e a implementação de uma API criada em Nest.Js rodando tudo em Docker. - ENGLISH
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Nest.js API
+URL to the Nest.js API repository:
+- [[Nest.js] article-management](https://github.com/TacioAntonio/nestjs-article-management)
 
-## Code scaffolding
+## Installation
+```sh
+$ git clone https://github.com/TacioAntonio/angular-article-management
+$ cd angular-article-management
+$ npm i
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Running locally
+```sh
+$ npm start
+```
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Running on docker
+```sh
+$ docker-compose up
+```
 
 ## Running unit tests
+```sh
+$ npm run test
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Contribution
+Please read [CONTRIBUTING.md](https://github.com/TacioAntonio/angular-article-management/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Running end-to-end tests
+## Versioning
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/TacioAntonio/angular-article-management/tags).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Authors
+| ![Tácio Antônio](https://avatars2.githubusercontent.com/u/44682965?s=150&=4)
+| -
+| [Tácio Antônio](https://github.com/TacioAntonio/)
 
-## Further help
+See also the list of [contributors](https://github.com/TacioAntonio/angular-article-management/graphs/contributors) who participated in this project.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/TacioAntonio/angular-article-management/blob/master/LICENSE.md) file for details.
+

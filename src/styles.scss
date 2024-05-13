@@ -1,0 +1,15 @@
+.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 50px;
+  padding: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  z-index: 1000;
+}

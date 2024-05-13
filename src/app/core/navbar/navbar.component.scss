@@ -1,0 +1,26 @@
+.navbar {
+  position: relative;
+  z-index: 0;
+
+  > .btn {
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+
+    &--logout {
+      cursor: pointer;
+
+      > .logout {
+        width: 32px;
+        height: 32px;
+        opacity: .8;
+
+        &:hover,
+        &:focus {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

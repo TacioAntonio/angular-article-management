@@ -1,0 +1,8 @@
+<div class="input__group">
+  <ng-content></ng-content>
+  <app-form-validations
+    *ngIf="errorMessages"
+    [field]="getFieldControl"
+    [messages]="errorMessages">
+  </app-form-validations>
+</div>

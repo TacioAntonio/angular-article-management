@@ -1,0 +1,42 @@
+<app-navbar-back [URL]="'/home'" />
+<div class="container">
+  <section class="section">
+    <form class="form" [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+      <input
+        class="input"
+        formControlName="title"
+        placeholder="Title..."
+        minlength="3"
+        maxlength="15"
+        required
+      />
+      <app-form-validations
+        [field]="this.formControls['title']"
+        [messages]="formControls['title']['errorMessages']">
+      </app-form-validations>
+
+      <textarea
+        class="content"
+        formControlName="content"
+        minlength="100"
+        placeholder="Content..."
+        required
+      ></textarea>
+      <app-form-validations
+        [field]="this.formControls['content']"
+        [messages]="formControls['content']['errorMessages']">
+      </app-form-validations>
+
+      @if(!articleData) {
+        <button class="btn btn__save" [disabled]="articleForm['invalid']">Create</button>
+      } @else {
+        <button class="btn btn__update" [disabled]="articleForm['invalid'] || isUpdatedArticle">Update</button>
+      }
+    </form>
+  </section>
+</div>
+
+<app-snackbar
+  [formStatus]="formStatus"
+  [messageStatus]="messageStatus"
+></app-snackbar>

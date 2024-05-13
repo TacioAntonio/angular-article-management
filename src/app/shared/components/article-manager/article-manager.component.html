@@ -1,0 +1,44 @@
+<section class="articles">
+  <div class="wrapper">
+    <input
+      class="search__input"
+      [(ngModel)]="textToSearch"
+      (input)="onInputChangeSearch($event.target)"
+      placeholder="Search article..."
+      maxlength="15"
+    />
+
+    <button
+      *ngIf="isAdmin"
+      class="btn btn--create"
+      [tabindex]="articles.length + 1"
+      (click)="navigateToCreateArticle('new')"
+    >Create article</button>
+  </div>
+
+  @for (article of articles; track article; let  i = $index) {
+      <article *ngIf="!isAdmin" class="article" [tabindex]="i + 1" (click)="navigateToArticle(article.id)">
+        <div class="header">
+          <h2 class="title">{{ article.title || '' }}</h2>
+        </div>
+        <p class="description">{{ article.content || '' }}</p>
+      </article>
+
+      <div *ngIf="isAdmin" class="article__wrapper">
+        <article class="article" [tabindex]="i + 1" (click)="navigateToArticle(article.id)">
+          <div class="header">
+            <h2 class="title">{{ article.title || '' }}</h2>
+          </div>
+          <p class="description">{{ article.content || '' }}</p>
+        </article>
+        <div class="btn-groups">
+          <button class="btn btn__edit" (click)="navigateToCreateArticle(article.id)">Edit</button>
+          <button class="btn btn__delete" (click)="deleteArticle(article.id)">Delete</button>
+        </div>
+      </div>
+  }
+
+  @if(!articles.length) {
+    <p class="text">No articles found.</p>
+  }
+</section>

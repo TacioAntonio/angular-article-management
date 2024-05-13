@@ -1,0 +1,26 @@
+<section class="panel">
+  <h2 class="title">{{ title }}</h2>
+  <form class="form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    @for (field of formControlsFields; track field) {
+      <app-input-field-group
+        [formGroup]="formGroup"
+        [field]="field"
+        [errorMessages]="formControls[field]['errorMessages']"
+      >
+        <input
+          [type]="inputTypes[field] || 'text'"
+          class="input"
+          [formControlName]="field"
+          [placeholder]="field"
+          required
+        >
+      </app-input-field-group>
+    }
+    <button
+      class="btn btn__submit--{{submitType}}"
+      type="submit"
+      [disabled]="formGroup['invalid']"
+    >{{ submitTitle }}</button>
+  </form>
+  <a class="link" [routerLink]="[linkURL]">{{ linkTitle }}</a>
+</section>

@@ -1,0 +1,17 @@
+<app-navbar/>
+
+<div class="container">
+  <app-article-manager
+    *ngIf="handledArticles"
+    [articles]="handledArticles"
+    [isAdmin]="isAdmin"
+    (isDeletedArticle)="getArticles()"
+    (isDeletedArticle)="handleSnackbar($event)"
+    (onTextToSearch)="handleArticleFiltering($event)"
+  />
+</div>
+
+<app-snackbar
+  [formStatus]="formStatus"
+  [messageStatus]="messageStatus"
+></app-snackbar>
