@@ -59,7 +59,7 @@ module.exports = {
 };
 ```
 
-**Crie o arquivo *package.json* e coloque:**
+**Modifique o arquivo *package.json*:**
 ```json
 "scripts": {
   ...
