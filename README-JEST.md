@@ -63,7 +63,7 @@ module.exports = {
 ```json
 "scripts": {
   ...
-  "test": "jest --clear-cache && ng test"
+  "test": "jest --clear-cache && ng test --coverage"
   ...
 }
 ```
