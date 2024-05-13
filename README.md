@@ -1,9 +1,9 @@
 # [ANGULAR] Article Management
 
 ![image](images/application.gif)
-> This application aims to act as an article management system, where users can authenticate and view articles created by administrators. Technically, this application is designed for unit testing with Jest and implementing an API created in Nest.Js, all running within Docker. - PT/BR
+> This application aims to act as an article management system, where users can authenticate and view articles created by administrators. Technically, this application is designed for unit testing with Jest and implementing an API created in Nest.Js, all running within Docker. - ENGLISH
 
-> Essa aplicação tem como objetivo atuar como um gerenciamento de artigos, onde usuários poderão a partir da autenticação, visualizar artigos criados pelos administradores. Tecnicamente essa aplicação tem como objetivo a realização de testes unitários com Jest, e a implementação de uma API criada em Nest.Js rodando tudo em Docker. - ENGLISH
+> Essa aplicação tem como objetivo atuar como um gerenciamento de artigos, onde usuários poderão a partir da autenticação, visualizar artigos criados pelos administradores. Tecnicamente essa aplicação tem como objetivo a realização de testes unitários com Jest, e a implementação de uma API criada em Nest.Js rodando tudo em Docker. - PT/BR
 
 ## Nest.js API
 URL to the Nest.js API repository:
